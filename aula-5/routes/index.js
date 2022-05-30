@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import express from 'express';
-import links from './links.js'
-import valida from './valida.js'
+import links from './links.js';
 
 const rotas = (app) => {
   app.route('/').get((req, res) => {
@@ -10,10 +9,8 @@ const rotas = (app) => {
   
   app.use(
     express.json(),
-    links,
-    valida
+    links
   )
 }
-
 
 export default rotas;
